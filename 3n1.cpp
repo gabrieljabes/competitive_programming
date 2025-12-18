@@ -14,7 +14,6 @@ int main(){
 
     int a = i;
 
-    
     //checagem de erro
     if(i > 10000 || i <= 0 || j > 10000 || j <= 0)
         return 1;
