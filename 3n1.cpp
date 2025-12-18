@@ -7,37 +7,36 @@ using namespace std;
 int main(){
     int i{}; // input
     int j{}; // limite
-    vector<int> length_cycles;
+    int max_cycle{-__INT_MAX__};
 
-    cin >> i;
-    cin >> j;
+    while(cin >> i >> j){
 
-    int a = i;
+    int a = min(i, j);
+    int b = max(i, j);
 
     //checagem de erro
-    if(i > 10000 || i <= 0 || j > 10000 || j <= 0)
+    if(i > 1000000 || i <= 0 || j > 1000000 || j <= 0)
         return 1;
-    for(i; i < j + 1; i++){
-        vector <int> ar;
-        ar.push_back(i);
-
-        int n = i;
+    //fazendo o ciclo de cada número
+    for(a; a < b + 1; a++){
+        int count{1};
+        int n = a;
+        //ciclo do número
         while(n != 1){
             if(n%2 != 0)
                 n = n*3 + 1;
             else
                 n /= 2;
-
-        ar.push_back(n);
+        count++;
         }
-
-    length_cycles.push_back(ar.size());
+    //pega o maior ciclo
+    if(count > max_cycle)
+        max_cycle = count;
     }
-    
-    auto p = max_element(length_cycles.begin(), length_cycles.end());
-    int max_cycles = *p;
-    i = a;
-    cout << i << " " << j << " " << max_cycles << endl;
+   
+    cout << i << " " << j << " " << max_cycle << endl;
+    }
+
     return 0;
 }
 
