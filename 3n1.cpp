@@ -7,16 +7,13 @@ using namespace std;
 int main(){
     int i{}; // input
     int j{}; // limite
-    int max_cycle{-__INT_MAX__};
 
     while(cin >> i >> j){
 
+    int max_cycle{-__INT_MAX__};
     int a = min(i, j);
     int b = max(i, j);
 
-    //checagem de erro
-    if(i > 1000000 || i <= 0 || j > 1000000 || j <= 0)
-        return 1;
     //fazendo o ciclo de cada número
     for(a; a < b + 1; a++){
         int count{1};
