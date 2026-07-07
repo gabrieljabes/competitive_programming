@@ -4,16 +4,6 @@ using namespace std;
 
 int main(){
 
-    // "dividir para conquistar"
-    
-
-
-        // 1. Obtain a random number from hardware to seed the generator
-    random_device rd;
-
-    // 2. Initialize the Mersenne Twister engine with the seed
-    mt19937 g(rd());
-
 
     vector <int> v(100000000);
     for(int i = 0; i < 100000000; i++){
