@@ -11,7 +11,7 @@ int main(){
     }
 
 
-    int x = 73;
+    int x; cin >> x;
     int size = v.size();
 
     int a = 0;
