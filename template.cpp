@@ -7,13 +7,17 @@
 typedef long long ll;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
-
 using namespace std;
 
-int main(){ //_
+void setIO(string name = ""){ _
+    if(name.size()){
+        freopen((name + ".in").c_str(), "r", stdin);
+        freopen((name + ".out").c_str(), "w", stdout);
+    }
+}
 
-    
+int main(){
+    setIO("problema");
 
     return 0;
 }
-
