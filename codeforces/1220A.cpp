@@ -28,9 +28,6 @@ int main(){ //_
     cout << endl;
 
     
-
-
-
     return 0;
 }
 
